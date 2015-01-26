@@ -1,0 +1,5 @@
+default 0
+timeout         10
+color cyan/blue white/blue 
+title GhostOS
+kernel /boot/kernel.bin 
