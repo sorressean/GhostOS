@@ -6,15 +6,15 @@ AS = nasm
 CC	= gcc
 CFLAGS	= -O0 -I../include -nostdlib -nostartfiles -nodefaultlibs -fno-stack-protector -Wall -ggdb -m32
 CFLAGS += -fno-omit-frame-pointer -ffreestanding
-CFLAGS+=	-mpreferred-stack-boundary=8
+#CFLAGS+=	-mpreferred-stack-boundary=8
 CFLAGS+=	-mno-mmx -mno-sse
 
 L_FLAGS	=
 FORMATTER = astyle
 FORMAT_FLAGS = --style=k/r
 
-A_FILES=
-A_FLAGS = -f elf
+A_FILES= boot.asm
+A_FLAGS = -f elf32
 LD = ld -m elf_i386
 
 S_FILES= video.c io.c kmain.c
@@ -47,4 +47,4 @@ format:
 	@rm -f *.orig
 
 iso:
-	@cd ../;scripts/mkiso.sh;cd $(CURDIR)
+	@cd ../;scripts/mkiso.asmh;cd $(CURDIR)

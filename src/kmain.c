@@ -2,13 +2,13 @@
 
 static void Banner()
 {
-MonitorPuts("Ghost OS");
+    MonitorPuts("Ghost OS");
 }
 
-int main()
+int kmain()
 {
-Banner();
+    Banner();
 
-while(true);
-return 0;
+    while(true);
+    return 0;
 }

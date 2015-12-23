@@ -7,7 +7,7 @@
 
 typedef unsigned int DWORD;
 typedef unsigned short WORD;
-typedef unsigned char BYTE;
+typedef char BYTE;
 typedef unsigned char UBYTE;
 typedef int BOOL;
 
